@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AplicacaoPoo.Dominio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace AplicacaoPoo.Windows
         public frmCliente()
         {
             InitializeComponent();
+            var cliente = new Cliente();
+            cliente.Nome = "Rychard Rocha";
+            txtNome.Text = cliente.Nome;
+            txtCpf.Text = "123.456.789-01";
+            lblSaldoInicialValor.Text = "1000";
+        }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            var credito = new Credito();
+            
         }
     }
 }
