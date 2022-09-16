@@ -33,7 +33,6 @@
             this.lblQuantidadeDeDolar = new System.Windows.Forms.Label();
             this.txtQuantidadeDolar = new System.Windows.Forms.TextBox();
             this.btnConverter = new System.Windows.Forms.Button();
-            this.lblResultado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCotacaoAtual
@@ -78,22 +77,11 @@
             this.btnConverter.UseVisualStyleBackColor = true;
             this.btnConverter.Click += new System.EventHandler(this.btnConverter_Click);
             // 
-            // lblResultado
-            // 
-            this.lblResultado.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblResultado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblResultado.ForeColor = System.Drawing.Color.Black;
-            this.lblResultado.Location = new System.Drawing.Point(119, 234);
-            this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(165, 60);
-            this.lblResultado.TabIndex = 5;
-            // 
             // ConversaoDoDolar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(407, 344);
-            this.Controls.Add(this.lblResultado);
+            this.ClientSize = new System.Drawing.Size(407, 258);
             this.Controls.Add(this.btnConverter);
             this.Controls.Add(this.txtQuantidadeDolar);
             this.Controls.Add(this.lblQuantidadeDeDolar);
@@ -113,6 +101,5 @@
         private Label lblQuantidadeDeDolar;
         private TextBox txtQuantidadeDolar;
         private Button btnConverter;
-        private Label lblResultado;
     }
 }

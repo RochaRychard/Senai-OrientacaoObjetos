@@ -22,7 +22,7 @@ namespace AplicacaoPoo.Estrutural.Windows
             var cotacaoAtual = float.Parse(txtCotacaoAtual.Text);
             var quantidadeDolar = float.Parse(txtQuantidadeDolar.Text);
             float valorReal = quantidadeDolar * cotacaoAtual;
-             MessageBox.Show("US$" + quantidadeDolar + " dólares convertido é igual a: R$" + valorReal.ToString() + "Reais.");
+             MessageBox.Show("US$" + quantidadeDolar + " dólares convertido é igual a: R$" + valorReal.ToString() + " Reais.");
         }
     }
 }
