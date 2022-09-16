@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AplicacaoPoo.Estrutural.Windows
 {
-    public partial class ConversaoDoDolar : Form
+    public partial class frmConversaoDoDolar : Form
     {
-        public ConversaoDoDolar()
+        public frmConversaoDoDolar()
         {
             InitializeComponent();
         }

@@ -21,9 +21,11 @@ namespace AplicacaoPoo.Estrutural.Windows
         {
             float valorUnitario = float.Parse(txtValorUnitario.Text);
             int quantidadeVendida = int.Parse(txtQuantidadeVendida.Text);
+            int idVendedor = int.Parse(txtIdDoVendedor.Text);
+            int codPeca = int.Parse(txtCodigoDaPeca.Text);
             var total = valorUnitario * quantidadeVendida;
             var comissao = total * 0.05;
-            MessageBox.Show("Comissão de R$" + comissao + " Reais.");
+            MessageBox.Show("Vendedor de ID: " + idVendedor + "terá a comissão de R$" + comissao + " Reais.");
         }
     }
 }
