@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AplicacaoPoo.Dominio;
+using Microsoft.VisualBasic.Logging;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +27,8 @@ namespace AplicacaoPoo.Estrutural.Windows
             int codPeca = int.Parse(txtCodigoDaPeca.Text);
             var total = valorUnitario * quantidadeVendida;
             var comissao = total * 0.05;
-            MessageBox.Show("Vendedor de ID: " + idVendedor + "terá a comissão de R$" + comissao + " Reais.");
+            var converte = new ComissaoVendas();
+            MessageBox.Show("Vendedor de ID: " + idVendedor + " terá a comissão de R$" + converte.ComissionarVendas(float.Parse(valorUnitario,float.Parse(quantidadeVendida.))) + " Reais.");
         }
     }
 }

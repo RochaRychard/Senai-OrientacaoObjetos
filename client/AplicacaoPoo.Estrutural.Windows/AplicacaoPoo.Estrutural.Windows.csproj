@@ -27,4 +27,8 @@
     <Folder Include="image\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\server\AplicacaoPoo.Dominio\AplicacaoPoo.Dominio.csproj" />
+  </ItemGroup>
+
 </Project>

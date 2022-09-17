@@ -77,18 +77,17 @@
             this.btnConverter.UseVisualStyleBackColor = true;
             this.btnConverter.Click += new System.EventHandler(this.btnConverter_Click);
             // 
-            // ConversaoDoDolar
+            // frmConversaoDoDolar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(407, 344);
-          //  this.Controls.Add(this.lblResultado);
+            this.ClientSize = new System.Drawing.Size(407, 244);
             this.Controls.Add(this.btnConverter);
             this.Controls.Add(this.txtQuantidadeDolar);
             this.Controls.Add(this.lblQuantidadeDeDolar);
             this.Controls.Add(this.txtCotacaoAtual);
             this.Controls.Add(this.lblCotacaoAtual);
-            this.Name = "ConversaoDoDolar";
+            this.Name = "frmConversaoDoDolar";
             this.Text = "ConversaoDoDolar";
             this.ResumeLayout(false);
             this.PerformLayout();

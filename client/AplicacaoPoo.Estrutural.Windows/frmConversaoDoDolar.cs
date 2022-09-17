@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AplicacaoPoo.Dominio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,8 +22,9 @@ namespace AplicacaoPoo.Estrutural.Windows
         {
             var cotacaoAtual = float.Parse(txtCotacaoAtual.Text);
             var quantidadeDolar = float.Parse(txtQuantidadeDolar.Text);
-            float valorReal = quantidadeDolar * cotacaoAtual;
-             MessageBox.Show("US$" + quantidadeDolar + " dólares convertido é igual a: R$" + valorReal.ToString() + " Reais.");
+            var conversor = new ConversaoMoeda();
+
+            MessageBox.Show("US$" + quantidadeDolar + " dólares convertido é igual a: R$" + conversor.DolarParaReal(float.Parse(txtCotacaoAtual.Text), float.Parse(txtQuantidadeDolar.Text)) + " Reais.");
         }
     }
 }
