@@ -14,5 +14,6 @@ namespace AplicacaoPoo.Dominio
             var comissao = total * 0.05;
             return (float)comissao;
         }
+
     }
 }

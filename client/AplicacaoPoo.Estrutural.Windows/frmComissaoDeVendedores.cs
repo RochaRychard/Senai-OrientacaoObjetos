@@ -28,7 +28,7 @@ namespace AplicacaoPoo.Estrutural.Windows
             var total = valorUnitario * quantidadeVendida;
             var comissao = total * 0.05;
             var converte = new ComissaoVendas();
-            MessageBox.Show("Vendedor de ID: " + idVendedor + " terá a comissão de R$" + converte.ComissionarVendas(float.Parse(valorUnitario,float.Parse(quantidadeVendida.))) + " Reais.");
+            MessageBox.Show("Vendedor de ID: " + idVendedor + " terá a comissão de R$" + converte.ComissionarVendas(valorUnitario,quantidadeVendida) + " Reais.");
         }
     }
 }
