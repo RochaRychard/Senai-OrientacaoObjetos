@@ -46,10 +46,12 @@
             // 
             // txtCotacaoAtual
             // 
-            this.txtCotacaoAtual.Location = new System.Drawing.Point(151, 56);
+            this.txtCotacaoAtual.Location = new System.Drawing.Point(134, 56);
             this.txtCotacaoAtual.Name = "txtCotacaoAtual";
-            this.txtCotacaoAtual.Size = new System.Drawing.Size(100, 23);
+            this.txtCotacaoAtual.PlaceholderText = "Cotação atual do dólar";
+            this.txtCotacaoAtual.Size = new System.Drawing.Size(132, 23);
             this.txtCotacaoAtual.TabIndex = 1;
+            this.txtCotacaoAtual.TextChanged += new System.EventHandler(this.txtCotacaoAtual_TextChanged);
             // 
             // lblQuantidadeDeDolar
             // 
@@ -62,16 +64,18 @@
             // 
             // txtQuantidadeDolar
             // 
-            this.txtQuantidadeDolar.Location = new System.Drawing.Point(151, 131);
+            this.txtQuantidadeDolar.Location = new System.Drawing.Point(153, 127);
             this.txtQuantidadeDolar.Name = "txtQuantidadeDolar";
-            this.txtQuantidadeDolar.Size = new System.Drawing.Size(100, 23);
+            this.txtQuantidadeDolar.PlaceholderText = "Valor em dólar";
+            this.txtQuantidadeDolar.Size = new System.Drawing.Size(87, 23);
             this.txtQuantidadeDolar.TabIndex = 3;
+            this.txtQuantidadeDolar.TextChanged += new System.EventHandler(this.txtQuantidadeDolar_TextChanged);
             // 
             // btnConverter
             // 
-            this.btnConverter.Location = new System.Drawing.Point(163, 183);
+            this.btnConverter.Location = new System.Drawing.Point(153, 185);
             this.btnConverter.Name = "btnConverter";
-            this.btnConverter.Size = new System.Drawing.Size(75, 23);
+            this.btnConverter.Size = new System.Drawing.Size(87, 23);
             this.btnConverter.TabIndex = 4;
             this.btnConverter.Text = "Converter";
             this.btnConverter.UseVisualStyleBackColor = true;

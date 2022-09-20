@@ -59,14 +59,14 @@
             this.btnComissãoDoVendedor.UseVisualStyleBackColor = true;
             this.btnComissãoDoVendedor.Click += new System.EventHandler(this.btnComissãoDoVendedor_Click);
             // 
-            // Principal
+            // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 184);
+            this.ClientSize = new System.Drawing.Size(369, 207);
             this.Controls.Add(this.btnComissãoDoVendedor);
             this.Controls.Add(this.btnConverterDolar);
-            this.Name = "Principal";
+            this.Name = "frmPrincipal";
             this.Text = "Principal";
             this.ResumeLayout(false);
 
