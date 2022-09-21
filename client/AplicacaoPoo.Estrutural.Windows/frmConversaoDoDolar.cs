@@ -18,7 +18,7 @@ namespace AplicacaoPoo.Estrutural.Windows
         public frmConversaoDoDolar()
         {
             InitializeComponent();
-            btnConverter.Enabled = false;
+            HabilitarDesabilitarBotaoCalcular();
         }
 
         private void btnConverter_Click(object sender, EventArgs e)
@@ -36,16 +36,15 @@ namespace AplicacaoPoo.Estrutural.Windows
             {
                 var resultado = float.Parse(txtCotacaoAtual.Text); 
                 CotacaoAtualEhValido = true;
-               if (ValorEmDolarEhValido && CotacaoAtualEhValido)
-                {
-                    btnConverter.Enabled = true;
-                }
+                HabilitarDesabilitarBotaoCalcular();
+
             }
             catch (Exception)
             {
                 MessageBox.Show("A cotação do dólar é um valor decimal!");
                 txtCotacaoAtual.Focus();
-                btnConverter.Enabled = false;
+                CotacaoAtualEhValido = false;
+                HabilitarDesabilitarBotaoCalcular();
             }
         }
 
@@ -55,17 +54,26 @@ namespace AplicacaoPoo.Estrutural.Windows
             {
                 var resultado = float.Parse(txtQuantidadeDolar.Text);
                 ValorEmDolarEhValido = true;
-                if (ValorEmDolarEhValido && CotacaoAtualEhValido)
-                {
-                    btnConverter.Enabled = true;
-                } 
+                HabilitarDesabilitarBotaoCalcular();
             }
             catch (Exception)
             {
                 MessageBox.Show("A quantidade de dólar deve ser um valor decimal!");
                 txtQuantidadeDolar.Focus();
-                btnConverter.Enabled = false;
+                ValorEmDolarEhValido = false;
+                HabilitarDesabilitarBotaoCalcular();
             }
-        }  
+        }
+        private void HabilitarDesabilitarBotaoCalcular()
+        {
+            if (ValorEmDolarEhValido && CotacaoAtualEhValido)
+            {
+                btnConverter.Enabled = true;
+            }
+            else
+            {
+                btnConverter.Enabled=false;
+            }
+        }
     } 
 }
