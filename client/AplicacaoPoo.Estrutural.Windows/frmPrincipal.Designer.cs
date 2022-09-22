@@ -66,6 +66,7 @@
             this.ClientSize = new System.Drawing.Size(369, 207);
             this.Controls.Add(this.btnComissãoDoVendedor);
             this.Controls.Add(this.btnConverterDolar);
+            this.MaximizeBox = false;
             this.Name = "frmPrincipal";
             this.Text = "Principal";
             this.ResumeLayout(false);
