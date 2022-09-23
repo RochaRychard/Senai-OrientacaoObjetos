@@ -1,4 +1,5 @@
 ﻿using AplicacaoPoo.Dominio;
+using AplicacaoPoo.Dominio.Helpers;
 using AplicacaoPoo.Dominio.services;
 using System;
 using System.Collections.Generic;
@@ -18,38 +19,32 @@ namespace AplicacaoPoo.Estrutural.Windows
         public frmConversaoDoDolar()
         {
             InitializeComponent();
-            btnConverter.Enabled = false;
+            lblPrimeiroValor.Text = $"1 {MoedaHelper.Dolar} igual a";
+            lblSegundoValor.Text = $"5,12 {MoedaHelper.Real}";
+
         }
 
-        private void btnConverter_Click(object sender, EventArgs e)
-        {
-            var quantidadeDolar = decimal.Parse(txtQuantidadeDolar.Text);
-            var moeda = new ConverterMoedaService();
 
-            var resultado = moeda.CoverterDolarEmReal(quantidadeDolar);
-
-            MessageBox.Show($"Valor convertido é: R$ {resultado} reais.");
-            txtQuantidadeDolar.Clear();
-        }
-
-        private void txtQuantidadeDolar_TextChanged(object sender, EventArgs e)
+        private void txtQuantidadeDolar_TextChanged_1(object sender, EventArgs e)
         {
             try
             {
-                if (txtQuantidadeDolar.Text == "")
-                {
-                    btnConverter.Enabled = false;
-                    return;
+                if (txtQuantidadeDolar.Text == "") return;
 
-                }
-                var resultado = decimal.Parse(txtQuantidadeDolar.Text);
-                btnConverter.Enabled = true;
+                var quantidadeDolar = decimal.Parse(txtQuantidadeDolar.Text);
+
+                var moeda = new ConverterMoedaService();
+                var resultado = moeda.CoverterDolarEmReal(quantidadeDolar);
+
+                lblPrimeiroValor.Text = $"{quantidadeDolar} {MoedaHelper.Dolar} igual a";
+                lblSegundoValor.Text = $"{resultado} {MoedaHelper.Real}";
+
+
             }
             catch (Exception)
             {
                 MessageBox.Show("A quantidade de dólar deve ser um valor decimal!");
                 txtQuantidadeDolar.Focus();
-                btnConverter.Enabled = false;
             }
         }
     }
