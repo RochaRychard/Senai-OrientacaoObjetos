@@ -8,9 +8,9 @@ namespace AplicacaoPoo.Dominio.Helpers
 {
     public static class MoedaHelper
     {
-        public static string Real = "Real Brasileiro";
-        public static string Dolar = "Dólar Americano";
-        public static string Euro = "Euro";
-        public static string Libra = "Libra Esterlina";
+        public const string Real = "Real Brasileiro";
+        public const string Dolar = "Dólar Americano";
+        public const string Euro = "Euro";
+        public const string Libra = "Libra Esterlina";
     }
 }

@@ -31,7 +31,7 @@
             this.lblPrimeiroValor = new System.Windows.Forms.Label();
             this.txtQuantidadeDolar = new System.Windows.Forms.TextBox();
             this.lblSegundoValor = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbMoedas = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblPrimeiroValor
@@ -41,8 +41,9 @@
             this.lblPrimeiroValor.ForeColor = System.Drawing.Color.White;
             this.lblPrimeiroValor.Location = new System.Drawing.Point(67, 9);
             this.lblPrimeiroValor.Name = "lblPrimeiroValor";
-            this.lblPrimeiroValor.Size = new System.Drawing.Size(0, 21);
+            this.lblPrimeiroValor.Size = new System.Drawing.Size(292, 21);
             this.lblPrimeiroValor.TabIndex = 2;
+            this.lblPrimeiroValor.Text = "fgsfhghshshsghfghfshgghfdhgfdhfhgfdh";
             // 
             // txtQuantidadeDolar
             // 
@@ -64,26 +65,28 @@
             this.lblSegundoValor.ForeColor = System.Drawing.Color.White;
             this.lblSegundoValor.Location = new System.Drawing.Point(67, 44);
             this.lblSegundoValor.Name = "lblSegundoValor";
-            this.lblSegundoValor.Size = new System.Drawing.Size(0, 30);
+            this.lblSegundoValor.Size = new System.Drawing.Size(410, 30);
             this.lblSegundoValor.TabIndex = 5;
+            this.lblSegundoValor.Text = "fgsfhghshshsghfghfshgghfdhgfdhfhgfdh";
             // 
-            // comboBox1
+            // cmbMoedas
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbMoedas.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.cmbMoedas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbMoedas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMoedas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbMoedas.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cmbMoedas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cmbMoedas.FormattingEnabled = true;
+            this.cmbMoedas.Items.AddRange(new object[] {
             "Dólar",
             "Euro",
             "Libra"});
-            this.comboBox1.Location = new System.Drawing.Point(198, 121);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(80, 25);
-            this.comboBox1.TabIndex = 6;
+            this.cmbMoedas.Location = new System.Drawing.Point(198, 121);
+            this.cmbMoedas.Name = "cmbMoedas";
+            this.cmbMoedas.Size = new System.Drawing.Size(128, 25);
+            this.cmbMoedas.TabIndex = 6;
+            this.cmbMoedas.SelectedIndexChanged += new System.EventHandler(this.cmbMoedas_SelectedIndexChanged);
             // 
             // frmConversaoDoDolar
             // 
@@ -91,7 +94,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(393, 218);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbMoedas);
             this.Controls.Add(this.lblSegundoValor);
             this.Controls.Add(this.txtQuantidadeDolar);
             this.Controls.Add(this.lblPrimeiroValor);
@@ -107,6 +110,6 @@
         private Label lblPrimeiroValor;
         private TextBox txtQuantidadeDolar;
         private Label lblSegundoValor;
-        private ComboBox comboBox1;
+        private ComboBox cmbMoedas;
     }
 }
