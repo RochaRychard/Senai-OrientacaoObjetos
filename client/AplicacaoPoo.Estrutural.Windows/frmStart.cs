@@ -21,7 +21,7 @@ namespace AplicacaoPoo.Estrutural.Windows
         {
             timerLoading.Enabled = true;
             progressBarLoad.Increment(2);
-            if(progressBarLoad.Value == 100)
+            if (progressBarLoad.Value == 100) 
             {
                 timerLoading.Enabled = false;
                 var form = new frmPrincipal();
