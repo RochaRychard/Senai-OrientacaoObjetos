@@ -101,6 +101,7 @@
             this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.Name = "frmConversaoDoDolar";
             this.Text = "ConversaoDoDolar";
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -30,7 +30,7 @@
         {
             this.lblIdDoVendedor = new System.Windows.Forms.Label();
             this.txtIdDoVendedor = new System.Windows.Forms.TextBox();
-            this.lblCodioDaPeca = new System.Windows.Forms.Label();
+            this.lblCodigoDaPeca = new System.Windows.Forms.Label();
             this.txtCodigoDaPeca = new System.Windows.Forms.TextBox();
             this.lblValorUnitario = new System.Windows.Forms.Label();
             this.txtValorUnitario = new System.Windows.Forms.TextBox();
@@ -54,15 +54,16 @@
             this.txtIdDoVendedor.Name = "txtIdDoVendedor";
             this.txtIdDoVendedor.Size = new System.Drawing.Size(161, 23);
             this.txtIdDoVendedor.TabIndex = 1;
+            this.txtIdDoVendedor.TextChanged += new System.EventHandler(this.VerificarSeTextBoxFoiPreenchido);
             // 
-            // lblCodioDaPeca
+            // lblCodigoDaPeca
             // 
-            this.lblCodioDaPeca.AutoSize = true;
-            this.lblCodioDaPeca.Location = new System.Drawing.Point(31, 68);
-            this.lblCodioDaPeca.Name = "lblCodioDaPeca";
-            this.lblCodioDaPeca.Size = new System.Drawing.Size(93, 15);
-            this.lblCodioDaPeca.TabIndex = 2;
-            this.lblCodioDaPeca.Text = "Código da peça:";
+            this.lblCodigoDaPeca.AutoSize = true;
+            this.lblCodigoDaPeca.Location = new System.Drawing.Point(31, 68);
+            this.lblCodigoDaPeca.Name = "lblCodigoDaPeca";
+            this.lblCodigoDaPeca.Size = new System.Drawing.Size(93, 15);
+            this.lblCodigoDaPeca.TabIndex = 2;
+            this.lblCodigoDaPeca.Text = "Código da peça:";
             // 
             // txtCodigoDaPeca
             // 
@@ -70,6 +71,7 @@
             this.txtCodigoDaPeca.Name = "txtCodigoDaPeca";
             this.txtCodigoDaPeca.Size = new System.Drawing.Size(164, 23);
             this.txtCodigoDaPeca.TabIndex = 3;
+            this.txtCodigoDaPeca.TextChanged += new System.EventHandler(this.VerificarSeTextBoxFoiPreenchido);
             // 
             // lblValorUnitario
             // 
@@ -86,6 +88,7 @@
             this.txtValorUnitario.Name = "txtValorUnitario";
             this.txtValorUnitario.Size = new System.Drawing.Size(154, 23);
             this.txtValorUnitario.TabIndex = 5;
+            this.txtValorUnitario.TextChanged += new System.EventHandler(this.VerificarSeTextBoxFoiPreenchido);
             // 
             // lblQuantidadeVendida
             // 
@@ -102,6 +105,7 @@
             this.txtQuantidadeVendida.Name = "txtQuantidadeVendida";
             this.txtQuantidadeVendida.Size = new System.Drawing.Size(135, 23);
             this.txtQuantidadeVendida.TabIndex = 7;
+            this.txtQuantidadeVendida.TextChanged += new System.EventHandler(this.VerificarSeTextBoxFoiPreenchido);
             // 
             // btnCalcular
             // 
@@ -124,7 +128,7 @@
             this.Controls.Add(this.txtValorUnitario);
             this.Controls.Add(this.lblValorUnitario);
             this.Controls.Add(this.txtCodigoDaPeca);
-            this.Controls.Add(this.lblCodioDaPeca);
+            this.Controls.Add(this.lblCodigoDaPeca);
             this.Controls.Add(this.txtIdDoVendedor);
             this.Controls.Add(this.lblIdDoVendedor);
             this.Name = "frmComissaoDeVendedores";
@@ -138,7 +142,7 @@
 
         private Label lblIdDoVendedor;
         private TextBox txtIdDoVendedor;
-        private Label lblCodioDaPeca;
+        private Label lblCodigoDaPeca;
         private TextBox txtCodigoDaPeca;
         private Label lblValorUnitario;
         private TextBox txtValorUnitario;
