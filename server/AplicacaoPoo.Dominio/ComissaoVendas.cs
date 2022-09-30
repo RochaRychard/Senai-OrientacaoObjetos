@@ -8,7 +8,7 @@ namespace AplicacaoPoo.Dominio
 {
     public class ComissaoVendas
     {
-        public float ComissionarVendas(float valorUnitario, float quantidadeVendida)
+        public float ComissionarVendas(float valorUnitario, int quantidadeVendida)
         {
             float total = valorUnitario * quantidadeVendida;
             var comissao = total * 0.05;
