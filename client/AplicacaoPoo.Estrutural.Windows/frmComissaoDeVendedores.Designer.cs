@@ -107,7 +107,7 @@
             this.btnCalcular.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnCalcular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnCalcular.Location = new System.Drawing.Point(488, 172);
+            this.btnCalcular.Location = new System.Drawing.Point(365, 166);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(129, 42);
             this.btnCalcular.TabIndex = 8;
@@ -119,7 +119,7 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(488, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(394, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 129);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -132,7 +132,7 @@
             this.lblResposta.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblResposta.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblResposta.ForeColor = System.Drawing.Color.Red;
-            this.lblResposta.Location = new System.Drawing.Point(12, 252);
+            this.lblResposta.Location = new System.Drawing.Point(39, 232);
             this.lblResposta.Name = "lblResposta";
             this.lblResposta.Size = new System.Drawing.Size(455, 63);
             this.lblResposta.TabIndex = 10;
@@ -160,7 +160,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(617, 324);
+            this.ClientSize = new System.Drawing.Size(539, 324);
             this.Controls.Add(this.cmbCodigoDaPeca);
             this.Controls.Add(this.cmbVendedores);
             this.Controls.Add(this.lblResposta);

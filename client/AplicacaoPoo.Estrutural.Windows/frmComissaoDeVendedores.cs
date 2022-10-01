@@ -1,8 +1,10 @@
 ﻿
 using AplicacaoPoo.Dominio;
 using AplicacaoPoo.Dominio.services;
+using AplicacaoPoo.Dominio.Services;
 using Microsoft.VisualBasic.Logging;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AplicacaoPoo.Estrutural.Windows
 {
@@ -20,7 +23,17 @@ namespace AplicacaoPoo.Estrutural.Windows
         {
             InitializeComponent();
             btnCalcular.Enabled = false;
+            
+            var vendedor = new VendedorService();
+            cmbVendedores.DataSource = vendedor.ListaDEVendedores();   
+            cmbCodigoDaPeca.DisplayMember = "Nome";
+            
 
+            var produto = new ProdutoService();
+            cmbCodigoDaPeca.DataSource = produto.ListagemProdutosFake();
+            cmbCodigoDaPeca.DisplayMember = "Nome";
+            cmbCodigoDaPeca.ValueMember = "Id";
+            /*
             var listaVendedor = new List<string>();
             listaVendedor.Add(ListaDeVendedores.Nome0);
             listaVendedor.Add(ListaDeVendedores.Nome1);
@@ -34,6 +47,7 @@ namespace AplicacaoPoo.Estrutural.Windows
             listaVendedor.Add(ListaDeVendedores.Nome9);
             listaVendedor.Add(ListaDeVendedores.Nome10);
             cmbVendedores.DataSource = listaVendedor;
+            cmbVendedores.SelectedIndex = 0;
             
             var codPeca = new List<string>();
             codPeca.Add(CodigoDaPeca.Prod0);
@@ -48,7 +62,8 @@ namespace AplicacaoPoo.Estrutural.Windows
             codPeca.Add(CodigoDaPeca.Prod9);
             codPeca.Add(CodigoDaPeca.Prod10);
             cmbCodigoDaPeca.DataSource = codPeca;
-
+            cmbCodigoDaPeca.SelectedIndex = 0;  
+            */
 
 
         }
@@ -125,65 +140,78 @@ namespace AplicacaoPoo.Estrutural.Windows
         {
             VerificarTxtQuantidadeVendidaPreenchido();
         }
-      
-        private void VerificarcmbCodigoEPreco()
-        {
-           // var preco = decimal.Parse(cmbCodigoDaPeca.Text);
-            switch (cmbCodigoDaPeca.SelectedValue)
-            {
-                case CodigoDaPeca.Prod1:
-                    {
-                        txtValorUnitario.Text = $"{CodigoDaPeca.Preco1}";
-                        break;
-                    }
-
-                case CodigoDaPeca.Prod2:
-                case CodigoDaPeca.Prod3:
-                    {
-                        txtValorUnitario.Text = $"{CodigoDaPeca.Preco3}";
-                        break;
-                    }
-                case CodigoDaPeca.Prod4:
-                    {
-                        txtValorUnitario.Text = $"{CodigoDaPeca.Preco4}";
-                        break;
-                    }
-                case CodigoDaPeca.Prod5:
-                    {
-                        txtValorUnitario.Text = $"{CodigoDaPeca.Preco5}";
-                        break;
-                    }
-                case CodigoDaPeca.Prod6:
-                    {
-                        txtValorUnitario.Text = $"{CodigoDaPeca.Preco6}";
-                        break;
-                    }
-                case CodigoDaPeca.Prod7:
-                    {
-                        txtValorUnitario.Text = $"{CodigoDaPeca.Preco7}";
-                        break;
-                    }
-                case CodigoDaPeca.Prod8:
-                    {
-                        txtValorUnitario.Text = $"{CodigoDaPeca.Preco8}";
-                        break;
-                    }
-                case CodigoDaPeca.Prod9:
-                    {
-                        txtValorUnitario.Text = $"{CodigoDaPeca.Preco9}";
-                        break;
-                    }
-                case CodigoDaPeca.Prod10:   
-                    {
-                        txtValorUnitario.Text = $"{CodigoDaPeca.Preco10}";
-                        break;
-                    }
-            }
-        }
 
         private void cmbCodigoDaPeca_SelectedIndexChanged(object sender, EventArgs e)
         {
             VerificarcmbCodigoEPreco();
+            //var produto = new ProdutoService();
+            //var produtosFake = produto.ListagemProdutosFake();
+
+            //var dado = produtosFake.Where(x => x.Id == (int)cmbCodigoDaPeca.SelectedValue).FirstOrDefault();
+            //txtValorUnitario.Text = dado.ValorUnitario.ToString();
         }
+
+        private void VerificarcmbCodigoEPreco()
+        {
+            var produtoSelecionado = (Produtos)cmbCodigoDaPeca.SelectedValue;
+            var produto = new ProdutoService();
+            var produtosFake = produto.ListagemProdutosFake();
+
+            var dado = produtosFake.Where(x => x.Id == produtoSelecionado.Id).FirstOrDefault();
+            txtValorUnitario.Text = dado.ValorUnitario.ToString();
+            
+            // var preco = decimal.Parse(cmbCodigoDaPeca.Text);
+            //switch ()
+            //{
+            //    case produto.Id = 00534201:
+            //        {
+            //            txtValorUnitario.Text = $"{CodigoDaPeca.Preco1}";
+            //            break;
+            //        }
+
+            //    case CodigoDaPeca.Prod2:
+            //    case CodigoDaPeca.Prod3:
+            //        {
+            //            txtValorUnitario.Text = $"{CodigoDaPeca.Preco3}";
+            //            break;
+            //        }
+            //    case CodigoDaPeca.Prod4:
+            //        {
+            //            txtValorUnitario.Text = $"{CodigoDaPeca.Preco4}";
+            //            break;
+            //        }
+            //    case CodigoDaPeca.Prod5:
+            //        {
+            //            txtValorUnitario.Text = $"{CodigoDaPeca.Preco5}";
+            //            break;
+            //        }
+            //    case CodigoDaPeca.Prod6:
+            //        {
+            //            txtValorUnitario.Text = $"{CodigoDaPeca.Preco6}";
+            //            break;
+            //        }
+            //    case CodigoDaPeca.Prod7:
+            //        {
+            //            txtValorUnitario.Text = $"{CodigoDaPeca.Preco7}";
+            //            break;
+            //        }
+            //    case CodigoDaPeca.Prod8:
+            //        {
+            //            txtValorUnitario.Text = $"{CodigoDaPeca.Preco8}";
+            //            break;
+            //        }
+            //    case CodigoDaPeca.Prod9:
+            //        {
+            //            txtValorUnitario.Text = $"{CodigoDaPeca.Preco9}";
+            //            break;
+            //        }
+            //    case CodigoDaPeca.Prod10:
+            //        {
+            //            txtValorUnitario.Text = $"{CodigoDaPeca.Preco10}";
+            //            break;
+            //        }
+            //}
+        }
+
     }
 }
