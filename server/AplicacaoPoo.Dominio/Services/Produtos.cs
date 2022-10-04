@@ -18,6 +18,7 @@ namespace AplicacaoPoo.Dominio.Services
         public List<Produtos> ListagemProdutosFake()
         {
             var lista = new List<Produtos>();
+            lista.Add(new Produtos() { Nome = "SELECT.." });
 
             lista.Add(new Produtos() 
             {

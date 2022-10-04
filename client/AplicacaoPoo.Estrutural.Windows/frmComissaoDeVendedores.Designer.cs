@@ -153,7 +153,7 @@
             this.cmbCodigoDaPeca.Name = "cmbCodigoDaPeca";
             this.cmbCodigoDaPeca.Size = new System.Drawing.Size(180, 23);
             this.cmbCodigoDaPeca.TabIndex = 12;
-            this.cmbCodigoDaPeca.SelectedIndexChanged += new System.EventHandler(this.cmbCodigoDaPeca_SelectedIndexChanged);
+            
             // 
             // frmComissaoDeVendedores
             // 
