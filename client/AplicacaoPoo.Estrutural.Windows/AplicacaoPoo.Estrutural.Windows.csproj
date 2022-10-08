@@ -28,6 +28,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MailKit" Version="3.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\server\AplicacaoPoo.Dominio\AplicacaoPoo.Dominio.csproj" />
   </ItemGroup>
 
